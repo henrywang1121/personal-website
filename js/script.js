@@ -6,13 +6,15 @@ $(document).ready(function(){
     });
 
     var type = new Typed(".typed",{
-        strings: ["M.S. Computer Information Systems", 
-                    "Boston University", "New Grad"],
+        strings: ["M.S. Computer Information Systems from Boston University", 
+                    "B.A. Molecular and Cell Biology from UC Berkeley", 
+                    "Passionate New Grad"],
         typeSpeed: 70,
         loop: true,
         startDelay: 1000,
         showCursor: false
     });
+
 
     $('.owl-carousel').owlCarousel({
         loop:true,

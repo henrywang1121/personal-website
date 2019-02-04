@@ -36,6 +36,8 @@ $(document).ready(function(){
     })
 
     var skillsTopOffset = $(".skillsSection").offset().top;
+    var statsTopOffset = $(".statsSection").offset().top;
+    var counterUpFinished = false;
 
     $(window).scroll(function(){
         if(window.pageYOffset > skillsTopOffset - $(window).height() + 200){
@@ -49,6 +51,16 @@ $(document).ready(function(){
                     $(this.el).find('.percent').text(Math.round(percent))
                 }
             });
+        }
+
+        if(!counterUpFinished && window.pageYOffset > statsTopOffset - $(window).height() + 200){
+            $(".counter").each(function(){
+                var element = $(this);
+                var value = parseInt(element.text());
+                element.countup(value);
+            });
+
+            counterUpFinished = true;
         }
     });
 });

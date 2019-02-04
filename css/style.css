@@ -75,7 +75,7 @@ body {
 
 }
 
-.skillsSection {
+.skillsSection, .contactSection {
     background-color: #2ecc71;
     color: #fff;
 }
@@ -177,4 +177,19 @@ body {
 
 .squareIcon4 {
     color: #e74c3c;
+}
+
+.contactButton {
+    color: #fff;
+    padding: 15px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+}
+
+.contactButton:hover {
+    text-decoration: none; 
+    color: #e74c3c;
+    background-color: #fff;
 }

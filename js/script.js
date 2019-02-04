@@ -65,6 +65,7 @@ $(document).ready(function(){
     });
 
     $("[data-fancybox]").fancybox();
+
     $(".items").isotope({
         filter: "*",
         animationOptions: {
@@ -72,5 +73,23 @@ $(document).ready(function(){
             easing: "linear",
             queue: false
         }
-    })
+    });
+
+    $("#filters a").click(function(){
+        $("#filter .current").removeClass("current");
+        $(this).addClass("current");
+
+        var selector = $(this).attr("data-filter");
+
+        $(".items").isotope({
+            filter: selector,
+            animationOptions: {
+                duraiton: 1500,
+                easing: "linear",
+                queue: false
+            }
+        });
+
+        return false;
+    });
 });

@@ -63,4 +63,14 @@ $(document).ready(function(){
             counterUpFinished = true;
         }
     });
+
+    $("[data-fancybox]").fancybox();
+    $(".items").isotope({
+        filter: "*",
+        animationOptions: {
+            duraiton: 1500,
+            easing: "linear",
+            queue: false
+        }
+    })
 });
